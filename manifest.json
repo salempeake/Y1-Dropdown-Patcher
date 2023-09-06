@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Yardione Dropdown Patcher",
+    "version": "1.0",
+    "description": "Injects CSS on yardione.com to fix the client dropdown",
+    "permissions": ["activeTab"],
+    "host_permissions": ["https://*.yardione.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://*.yardione.com/*"],
+        "css": ["inject.css"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
